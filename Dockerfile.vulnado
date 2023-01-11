@@ -1,0 +1,5 @@
+FROM maven:3.8.4-openjdk-17-slim
+ADD . /src
+WORKDIR /src
+RUN mvn -Dmaven.test.failure.ignore clean package
+RUN ls target
