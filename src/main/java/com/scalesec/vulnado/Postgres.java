@@ -19,6 +19,7 @@ public class Postgres {
                     .append(System.getenv("PGHOST"))
                     .append("/")
                     .append(System.getenv("PGDATABASE")).toString();
+            .append(System.getenv("PGDATABASE")).toString();
             return DriverManager.getConnection(url,
                     System.getenv("PGUSER"), System.getenv("PGPASSWORD"));
         } catch (Exception e) {
